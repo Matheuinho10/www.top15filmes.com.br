@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TOP 15 Filmes é um site que apresenta os melhores filmes de todos os tempos, com informações sobre cada filme, incluindo sinopse, elenco e avaliações.">
+    <link href="https://fonts.googleapis.com/css2?family=DM Serif Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=The seasons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>TOP 15 Filmes</title>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+   <header class="cabecalho" id="inicio">
+        <div class="container cabecalhoConteudo">
+            <a class="marca" href="#inicio" aria-label="Ir para o Inicio">
+                <img src="TOP 15 (2).svg" alt="TOP15 Filmes">
+                <h1 class="marcaNome">TOP 15 Filmes</h1>
+            </a>
+            <nav class="navegacao" aria-label="Navegação Principal">
+                <ul class="navegacaoLista">
+                    <li class="navegacaoListaItem"><a href="index.html">Home</a></li>
+                    <li class="navegacaoListaItem"><a href="filmes.html">Filmes</a></li>
+                    <li class="navegacaoListaItem"><a href="series.html">Séries</a></li>
+                </ul>
+
+                <div class="userProfile hidden" id="userProfile" aria-live="polite">
+                    <div class="userAvatar" aria-hidden="true">A</div>
+                    <div class="userProfileText">
+                        <span>Perfil</span>
+                        <strong id="profileName">Admin</strong>
+                    </div>
+                    <button class="logoutBtn" id="logoutBtn" type="button" aria-label="Sair da conta">Sair</button>
+                </div>
+
+                <button class="navLoginBtn" id="openLoginBtn" type="button" aria-label="Abrir login">Entrar</button>
+            </nav>
+        </div>
+   </header>
+
+   <div class="login-modal hidden" id="loginModal" aria-hidden="true">
+        <div class="login-card" role="dialog" aria-modal="true" aria-labelledby="loginTitulo">
+            <button class="login-close" id="closeLoginBtn" type="button" aria-label="Fechar login">×</button>
+
+            <div class="auth-tabs" aria-label="Alternar entre login e cadastro">
+                <button type="button" class="auth-tab active" data-auth-tab="login">Login</button>
+                <button type="button" class="auth-tab" data-auth-tab="register">Cadastrar</button>
+            </div>
+
+            <div id="loginPanel" class="auth-panel active">
+                <h2 id="loginTitulo">Login</h2>
+                <form id="loginForm" novalidate>
+                    <label for="loginIdentifier">Usuário ou e-mail</label>
+                    <input id="loginIdentifier" name="loginIdentifier" type="text" placeholder="Digite seu usuário ou e-mail" required>
+
+                    <label for="senha">Senha</label>
+                    <input id="senha" name="senha" type="password" placeholder="Digite sua senha" required>
+
+                    <button type="submit" class="login-submit">Entrar</button>
+                    <p class="login-message" id="loginMessage" aria-live="polite"></p>
+                    <p class="login-helper">Dica: usuário <strong>admin</strong> e senha <strong>123456</strong></p>
+                </form>
+            </div>
+
+            <div id="registerPanel" class="auth-panel">
+                <h2>Cadastre-se</h2>
+                <form id="registerForm" novalidate>
+                    <label for="registerUsuario">Usuário</label>
+                    <input id="registerUsuario" name="registerUsuario" type="text" placeholder="Crie seu nome de usuário" required>
+
+                    <label for="registerEmail">E-mail</label>
+                    <input id="registerEmail" name="registerEmail" type="email" placeholder="Digite seu e-mail" required>
+
+                    <label for="registerSenha">Senha</label>
+                    <input id="registerSenha" name="registerSenha" type="password" placeholder="Crie sua senha" required>
+
+                    <button type="submit" class="login-submit">Cadastrar</button>
+                    <p class="login-message" id="registerMessage" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+   </div>
+    <!-- HERO SECTION -->
+     <main id="conteudo">
+        <section class="hero" aria-labelledby="heroTitulo">
+            <div class="container heroConteudo">
+                    <div class="heroTexto">
+                        <p class="etiqueta">Em Cartaz</p>
+
+                        <div class="heroCabecalho">
+                            <h2 class="titulo-destaque" id="titulo-destaque">FurSMP: Prologo Zero</h2>
+                            <div class="heroBadges" aria-label="Informações do filme">
+                                <span>SMP</span>
+                                <span>Furry</span>
+                                <span>Minecraft Roleplay</span>
+                            </div>
+                        </div>
+
+                        <img src="/img/FurSMP Prólogo Zero.svg" alt="Cartaz do trailer FurSMP: Prólogo Zero" class="imagem-destaque">
+
+                        <div class="heroMeta" aria-label="Detalhes do filme">
+                            <div>
+                                <span>Direção</span>
+                                <strong>NextFur • TOP 15 Filmes</strong>
+                            </div>
+                            <div>
+                                <span>Data do Lançamento</span>
+                                <strong>Em breve 2026</strong>
+                            </div>
+                        </div>
+
+                        <p class="descricao-destaque">
+                            O FurSMP é um servidor de jogos para o Minecraft que utiliza mods, plugins e scripts. Seu principal foco é unir a comunidade furry com jogadores interessados em um espaço divertido, onde podem jogar em um mundo repleto de eventos, vídeos, animações e histórias. O servidor é projetado para ser semelhante a um RPG, onde cada jogador cria seu personagem e pode seguir sua própria história. O FurSMP foi fundado em outubro de 2023 e tem como objetivo promover a inclusão e a participação da comunidade furry. 
+                            
+                            Caso alguém queira participar como jogador do projeto, é necessário preencher e ser autorizado pelo processo de Withelist. Todas as informações necessárias estão disponíveis no website ou no Discord do FurSMP.
+                            <p class="descricao-discord">
+                                <a href="https://fursmp.com/discord" target="_blank" rel="noopener noreferrer">Clique aqui para saber mais sobre o FurSMP!</a>
+                            </p>
+                        </p>
+
+                        <div class="heroActions">
+                            <a href="trailer.html" class="botao-destaque">Assista ao Trailer</a>
+                            <a href="#inicio" class="botao-secundario">Ver Mais</a>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section class="buscaCatalogo" aria-labelledby="buscaTitulo">
+            <div class="container">
+                <div class="buscaBox">
+                    <label for="buscaFilmes" id="buscaTitulo">Pesquisar filmes e séries</label>
+                    <input id="buscaFilmes" type="search" placeholder="Digite um título ou gênero..." autocomplete="off">
+                    <p class="buscaStatus" id="buscaStatus" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalogo" aria-labelledby="catalogoTitulo">
+            <div class="container">
+                <div class="catalogoHeader">
+                    <p class="etiqueta">Top 15</p>
+                    <h3 id="catalogoTitulo">Filmes</h3>
+                </div>
+
+                <div class="filmesGrid">
+                    <article class="filmeCard">
+                        <div class="filmePoster posterOsFarofeiros">
+                            <img src="/img/os farofeiros.png" alt="Os Farofeiros">
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>Os Farofeiros</h5>
+                            <p>Comédia Brasileira</p>
+                        </div>
+                    </article>
+
+                    <article class="filmeCard">
+                        <div class="filmePoster posterAmericanPsyco">
+                            <img src="/img/image (3).png" alt="American Psycho">
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>American Psycho</h5>
+                            <p>Suspense • Terror</p>
+                        </div>
+                    </article>
+
+                    <article class="filmeCard">
+                        <div class="filmePoster posterAultimaCasa">
+                            <img src="/img/image (5).png" alt="A Ultima Casa">
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>A Ultima Casa</h5>
+                            <p>Ficção • Suspense</p>
+                        </div>
+                    </article>
+
+                    <article class="filmeCard">
+                        <div class="filmePoster posterKingsman">
+                            <img src="/img/kingsman the golden circle.jpg" alt="Kingsman: O Círculo Dourado">
+                            <a class="watchVideoBtn" href="kingsman.html" aria-label="Abrir a página do filme Kingsman: O Círculo Dourado">
+                                ▶ Assistir
+                            </a>
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>Kingsman: O Círculo Dourado</h5>
+                            <p>Ação • Aventura</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalogo seriesSection" aria-labelledby="seriesTitulo">
+            <div class="container">
+                <div class="catalogoHeader">
+                    <p class="etiqueta">Top 15</p>
+                    <h3 id="seriesTitulo">Séries</h3>
+                </div>
+
+                <div class="filmesGrid seriesGrid">
+                    <article class="filmeCard">
+                        <div class="filmePoster posterRepublicaRP">
+                            <img src="/Título.png" alt="Republica RP a Serie Cartaz">
+                            <a class="watchVideoBtn" href="republica.html" aria-label="Abrir a página da série Republica RP">
+                                ▶ Assistir
+                            </a>
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>Republica RP a Serie</h5>
+                            <p>Suspense • Aventura</p>
+                        </div>
+                    </article>
+
+                    <article class="filmeCard">
+                        <div class="filmePoster posterCangaceiroArisia">
+                            <img src="/img/Cabeçalho.svg" alt="O Cangaceiro de Arisia">
+                            <a class="watchVideoBtn" href="cangaceiro.html" aria-label="Abrir a página da série O Cangaceiro de Arisia">
+                                ▶ Assistir
+                            </a>
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>O Cangaceiro de Arisia</h5>
+                            <p>Original TOP 15 • Aventura</p>
+                        </div>
+                    </article>
+
+                    <article class="filmeCard">
+                        <div class="filmePoster">
+                            <img src="/img/A SERIE.svg" alt="Blox Friuts a Serie">
+                            <a class="watchVideoBtn" href="bloxfruits.html" aria-label="Abrir a página da série Blox Friuts a Serie">
+                                ▶ Assistir
+                            </a>
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>Blox Friuts a Serie</h5>
+                            <p>Aventura • Fantasia</p>
+                        </div>
+                    </article>
+
+                    <article class="filmeCard">
+                        <div class="filmePoster posterpeakyBlinders">
+                            <img src="/PeakyBlindersCartaz.jpg" alt="Peaky Blinders: Sangue, Apostas e Navalhas">
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>Peaky Blinders: Sangue, Apostas e Navalhas</h5>
+                            <p>Crime • Drama</p>
+                        </div>
+                    </article>
+
+                    <article class="filmeCard">
+                        <div class="filmePoster posterDois">
+                            <img src="/img/zé mané e Lampião.png" alt="Zé mane e Lampião - nó em pingo d'gua">
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>Zé mane e Lampião - nó em pingo d'gua</h5>
+                            <p>Brasileiro • Mini Série</p>
+                        </div>
+                    </article>
+
+                    <article class="filmeCard">
+                        <div class="filmePoster posterTres">
+                            <img src="/img/Design sem nome.jpg" alt="Idade das Trevas">
+                        </div>
+                        <div class="filmeCardBody">
+                            <h5>Idade das Trevas</h5>
+                            <p>Medieval • Mini Série</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
